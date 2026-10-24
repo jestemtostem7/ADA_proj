@@ -60,11 +60,16 @@ procedure Main is
       end Czy_koniec;
    end Status_dostaw;
 
+   task Monitor is
+       entry Ile_Dostaw(Licznik : Integer);
+      entry Zakoncz;
+   end Monitor;
+
+
    --LOGIKA ROZLADUNKU
 
    task Rozladunek is
       entry Nowa_Dostawa(D : Dostawa);
-      entry Ile_dostaw(Wynik : out Integer);
    end Rozladunek;
 
    task body Rozladunek is
@@ -85,15 +90,12 @@ procedure Main is
                end if;
             end Nowa_Dostawa;
          or
-            accept Ile_dostaw(Wynik : out Integer) do
-               Wynik := Licznik;
-               end Ile_dostaw;
-         or
             delay 3.0;
             Put_Line("Brak nowych dostaw");
          end select;
          exit when Status_dostaw.Czy_koniec;
       end loop;
+      Monitor.Ile_dostaw(Licznik);
 
 
    end Rozladunek;
@@ -213,13 +215,11 @@ procedure Main is
       end loop;
    end Magazyn;
 
-   task Monitor is
-      entry Zakoncz;
-   end Monitor;
 
    task body Monitor is
       Koniec : Boolean := False;
       X : Integer;
+      Liczba_dostaw : Integer := -1;
    begin
       while not Koniec loop
          select
@@ -242,9 +242,19 @@ procedure Main is
       Put_line("");
       Put_line("Robot 1: "); --TU WPISZ STANY ROBOTOW
       Put_line("Robot 2: "); --TU WPISZ STANY ROBOTOW
-      Put_line("");
-      Rozladunek.Ile_dostaw(X);
-      Put_line("Dostawy obsluzone: " & Integer'Image(X));
+            Put_line("");
+            select
+               accept Ile_dostaw(Licznik : Integer) do
+                 Liczba_dostaw := Licznik;
+                 Put_line("Dostawy obsluzone: " & Integer'Image(Liczba_dostaw));
+               end Ile_dostaw;
+         else
+            if Liczba_dostaw = -1 then
+               Put_Line("Rozladunek jest zajety - pomijam odczyt");
+            else
+               Put_line("Dostawy obsluzone: " & Integer'Image(Liczba_dostaw));
+               end if;
+               end select;
 
             Put_Line("---------------------------");
          or
@@ -257,5 +267,6 @@ procedure Main is
 
 begin
    delay 40.0;
-   Monitor.Zakoncz;
+   Monitor.Zakoncz; --TO TRZEBA WYWOLAC KIEDY INDZIEJ -> PO ZAKONCZENIU TRANSPORTU?
+   Magazyn.Zakoncz; -- TO SAMO
 end Main;

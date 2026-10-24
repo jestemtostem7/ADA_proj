@@ -18,13 +18,13 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__main.adb		f94c24c1 OO PK IL
+U ada_main%b		b__main.adb		d5c833a2 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__main.ads		e3ad2db9 EE NE OO PK IL
+U ada_main%s		b__main.ads		4fec61e6 EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -32,8 +32,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20261021164658 76789da1 ada%s
 D a-except.ads		20261021164650 8699d7ff ada.exceptions%s
 D a-unccon.ads		20261021164656 0e9b276f ada.unchecked_conversion%s
-D b__main.ads		20261024214330 9c0a11fe ada_main%s
-D b__main.adb		20261024214330 1050ca85 ada_main%b
+D b__main.ads		20261024224538 304b5da1 ada_main%s
+D b__main.adb		20261024224538 909591b9 ada_main%b
 D system.ads		20261021164724 898beeee system%s
 D s-parame.ads		20261021164718 a1aeab5c system.parameters%s
 D s-restri.ads		20261021164718 f38f2845 system.restrictions%s
