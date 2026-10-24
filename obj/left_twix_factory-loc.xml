@@ -1,35 +1,32 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\ADA\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 5" >
-      <vfs_project />
-      <vfs_file>C:\ADA\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\ADA\default.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+  <Project>
+    <vfs_file>C:\ADA\left_twix_factory.gpr</vfs_file>
+    <file_marker column=" 1" line=" 26" >
       <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
       <vfs_file>C:\ADA\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 7" >
+    <file_marker column=" 16" line=" 214" >
       <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
       <vfs_file>C:\ADA\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\ADA\left_twix_factory.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 56" line=" 119" >
+    <file_marker column=" 45" line=" 177" >
       <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
       <vfs_file>C:\ADA\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 16" line=" 33" >
+    <file_marker column=" 19" line=" 222" >
+      <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
+      <vfs_file>C:\ADA\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 44" line=" 241" >
+      <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
+      <vfs_file>C:\ADA\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 242" >
+      <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
+      <vfs_file>C:\ADA\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 11" line=" 256" >
       <vfs_project>C:\ADA\left_twix_factory.gpr</vfs_project>
       <vfs_file>C:\ADA\src\main.adb</vfs_file>
     </file_marker>
